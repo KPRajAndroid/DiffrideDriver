@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.DocumentUploadActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Document Requirement"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="All Images upload needs to be clear for smooth registration process"
+                android:paddingStart="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/driving_license"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/front"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/driving_license"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/expiry_date"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:id="@+id/driving_license_expire_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="YYYY-MM-DD"
+                            android:padding="8dp"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/national_registration_identiry_card"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/front"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/nric_upload_image_front"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/car_grant"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/front"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/car_grant_upload_image_front"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/back"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/car_grant_upload_image_back"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/insurance_cover_note"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/front"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/insurance_cover_note_front"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/expiry_date"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:id="@+id/insurance_cover_expire_at"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="YYYY-MM-DD"
+                            android:padding="8dp"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/road_tax"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/front"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/road_tax_image_front"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/expiry_date"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:id="@+id/road_tax_expire_at"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="YYYY-MM-DD"
+                            android:padding="8dp"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/driver_photo"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <com.diff.provider.Utilities.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/picture"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/driver_photo"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/dotted"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_image_add_button" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Clear headshot photo / passport size photo is required"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <com.diff.provider.Utilities.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/phone_imei"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/_14sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/phone_imei"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="To find the IMEI number, dial *#06# on your phone’s keypad" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/nextIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_arrow_right"
+        app:backgroundTint="@color/colorPrimary" />
+
+</android.support.design.widget.CoordinatorLayout>

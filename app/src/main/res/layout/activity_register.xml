@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_icon" />
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/enter_your_details"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/email"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sample_mail_id"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_14sdp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/full_name"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.diff.provider.Utilities.MyEditText
+                        android:id="@+id/first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ/ "
+                        android:hint="@string/name_as_per_ic"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords|textPersonName"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_14sdp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <com.diff.provider.Utilities.MyEditText
+                        android:id="@+id/last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/last_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapSentences"
+                        android:maxLines="1"
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/_14sdp" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/gender"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioGroup
+                android:id="@+id/gender_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:checked="true"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:id="@+id/male_img"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/male" />
+
+                <RadioButton
+                    android:id="@+id/female_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:id="@+id/female_img"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/female" />
+
+            </RadioGroup>
+
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/phone_number"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/password"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                    android:hint="@string/password_txt"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_14sdp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/retype_password"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                    android:hint="******"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_14sdp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/national_registration_identiry_card"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/nric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_14sdp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/address"
+                android:textAllCaps="true"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/postal_address"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="visible">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="00, Jalan ADC, Taman ZZZ,"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_14sdp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.diff.provider.Utilities.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/town"
+                        android:textColor="@color/black_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <com.diff.provider.Utilities.MyEditText
+                            android:id="@+id/town"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.diff.provider.Utilities.MyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/state"
+                        android:textColor="@color/black_text_color"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <com.diff.provider.Utilities.MyEditText
+                            android:id="@+id/state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1"
+                            android:textAlignment="viewStart"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/referral"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <com.diff.provider.Utilities.MyEditText
+                    android:id="@+id/referral_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/referral"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/_14sdp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/vehicle_type"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical" />
+
+            <ImageView
+                android:id="@+id/upload_img"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_60sdp"
+                android:contentDescription="@string/app_name" />
+
+            <com.diff.provider.Utilities.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/choose_type"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+
+            <Spinner
+                android:id="@+id/service_spinner"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/nextIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_arrow_right"
+        app:backgroundTint="@color/colorPrimary" />
+
+
+</android.support.design.widget.CoordinatorLayout>

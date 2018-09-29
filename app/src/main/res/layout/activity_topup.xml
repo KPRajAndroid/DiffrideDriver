@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TopupActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/gradient_bar"
+            android:elevation="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@drawable/back_icon"
+                android:tint="@color/text_color_white" />
+
+            <com.diff.provider.Utilities.MyBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Wallet Cash - Top-Up"
+                android:textColor="@color/text_color_white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <com.diff.provider.Utilities.MyBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="1. Select top-up vaue"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp" />
+
+            <RadioGroup
+                android:id="@+id/toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rd20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM20"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+                <RadioButton
+                    android:id="@+id/rd50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM50"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+                <RadioButton
+                    android:id="@+id/rd100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM100"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <RadioButton
+                    android:id="@+id/rd200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM200"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </RadioGroup>
+
+            <com.diff.provider.Utilities.MyBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center_vertical"
+
+                android:text="Or enter a value"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_11ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <com.diff.provider.Utilities.MyBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="RM"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <EditText
+                    android:id="@+id/txtminRM5"
+                    android:layout_width="@dimen/_125sdp"
+                    android:layout_height="wrap_content"
+                    android:hint=" Minimum RM5"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <com.diff.provider.Utilities.MyBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text="2.Payment method"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/mol_pay" />
+
+                <!-- <ImageView
+                     android:layout_width="@dimen/_50sdp"
+                     android:layout_height="@dimen/_50sdp"
+                     android:layout_margin="@dimen/_5sdp"
+                     android:src="@drawable/logo" />-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center|left">
+
+                <CheckBox
+                    android:id="@+id/chkTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:singleLine="true" />
+
+                <com.diff.provider.Utilities.MyBoldTextView
+                    android:id="@+id/lblTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start"
+                    android:textColor="@color/web_link"
+                    android:text="I agree Terms &amp; Conditions"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+
+            <com.diff.provider.Utilities.MyButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/submit"
+                android:textColor="@color/button_text_color" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReloadActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:background="@drawable/gradient_bar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.49">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView">
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/tv_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="Cash"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view5" />
+
+            <ImageView
+                android:id="@+id/img_card"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_cash"
+                app:layout_constraintStart_toStartOf="@+id/tv_cash"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cash"
+                app:srcCompat="@drawable/ic_bookmark" />
+
+            <TextView
+                android:id="@+id/lblCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="1"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/view5"
+                app:layout_constraintEnd_toEndOf="@+id/img_card"
+                app:layout_constraintStart_toStartOf="@+id/img_card"
+                app:layout_constraintTop_toBottomOf="@+id/img_card" />
+
+            <TextView
+                android:id="@+id/tv_transfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Transfer"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/view5"
+                app:layout_constraintEnd_toEndOf="@+id/view5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/tv_paid_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:text="Paid Credit"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view5" />
+
+            <ImageView
+                android:id="@+id/img_paid"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_paid_credit"
+                app:layout_constraintStart_toStartOf="@+id/tv_paid_credit"
+                app:layout_constraintTop_toBottomOf="@+id/tv_paid_credit"
+                app:srcCompat="@drawable/ic_location_marker" />
+
+            <TextView
+                android:id="@+id/lblPaidCredit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="1"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/view5"
+                app:layout_constraintEnd_toEndOf="@+id/img_paid"
+                app:layout_constraintStart_toStartOf="@+id/img_paid"
+                app:layout_constraintTop_toBottomOf="@+id/img_paid" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+            <TextView
+                android:id="@+id/tv_enter_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="1. Select reload value"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view6" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="155dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_enter_amount">
+
+                <RadioButton
+                    android:id="@+id/rd20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM20"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+                <RadioButton
+                    android:id="@+id/rd50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM50"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+                <RadioButton
+                    android:id="@+id/rd100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM100"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+
+
+                <RadioButton
+                    android:id="@+id/rd200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="RM200"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/_10ssp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Or Enter the value"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <EditText
+                android:id="@+id/txtReloadAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:ems="10"
+                android:hint="RM Minimum RM20"
+                android:inputType="number"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/view6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_value"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="355dp"  />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+
+            <TextView
+                android:id="@+id/tv_summary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="2. Summary"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/tv_current_balances"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Current Cash Balances :"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_summary" />
+
+            <TextView
+                android:id="@+id/lblCurrentBalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="-"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_current_balances"
+                app:layout_constraintTop_toBottomOf="@+id/tv_summary" />
+
+            <TextView
+                android:id="@+id/tv_withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Credit Reload value :"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_current_balances"
+                app:layout_constraintTop_toBottomOf="@+id/lblCurrentBalance" />
+
+            <TextView
+                android:id="@+id/lblReloadValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="-"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lblCurrentBalance"
+                app:layout_constraintTop_toBottomOf="@+id/lblCurrentBalance" />
+
+            <TextView
+                android:id="@+id/tv_withdrawal_changes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="New Paid Credit Avabilable :"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_withdrawal"
+                app:layout_constraintTop_toBottomOf="@+id/lblReloadValue" />
+
+            <TextView
+                android:id="@+id/lblNewPaidCredit"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="-"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lblReloadValue"
+                app:layout_constraintTop_toBottomOf="@+id/lblReloadValue" />
+
+            <TextView
+                android:id="@+id/tv_balances"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="New Cash Balance :"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/tv_withdrawal_changes"
+                app:layout_constraintTop_toBottomOf="@+id/tv_withdrawal_changes"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/lblNewBalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="-"
+                android:textColor="@color/text_color_white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lblNewPaidCredit"
+                app:layout_constraintTop_toBottomOf="@+id/lblNewPaidCredit"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/chkConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Select to Confirm details"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <CheckBox
+                android:id="@+id/chkAgree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chkConfirm" />
+
+            <Button
+                android:id="@+id/btnReload"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorPrimary"
+                android:text="Reload"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chkAgree" />
+
+            <TextView
+                android:id="@+id/lblTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="I agree to Terms &amp; Conditions"
+                android:textColor="@color/web_link"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/btnReload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/chkAgree"
+                app:layout_constraintTop_toBottomOf="@+id/chkConfirm" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

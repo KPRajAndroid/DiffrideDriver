@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WithdrawalActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView">
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_cash_balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/wallet_cash_balance"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cash_balance" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="1."
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/tv_enter_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:text="Enter withdrawal amount"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_number"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+
+            <EditText
+                android:id="@+id/txtWidthAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="150dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="RM"
+                android:inputType="number"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_enter_amount" />
+
+            <TextView
+                android:id="@+id/tv_minimum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="32dp"
+                android:text="Minimum Wallet Balance RM20"
+                android:textColor="@color/text_color_white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtWidthAmount" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/tv_wallet_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="2."
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/tv_wallet_enter_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Enter Bank Details"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_wallet_number"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="Name :"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@+id/tv_wallet_enter_amount"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wallet_enter_amount" />
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint=""
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtAccNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wallet_enter_amount" />
+
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Account Number :"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <EditText
+                android:id="@+id/txtAccNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="5dp"
+                android:ems="10"
+                android:hint="xxxx xxxx xxxx xxxx"
+                android:inputType="number"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_account"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <TextView
+                android:id="@+id/tv_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Bank :"
+                android:textAlignment="center"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@+id/tv_account"
+                app:layout_constraintTop_toBottomOf="@+id/txtAccNumber" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_bank"
+                app:layout_constraintTop_toBottomOf="@+id/txtAccNumber" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Save my information for future withdrawal"
+                android:textColor="@color/text_color_white"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/tv_wallet_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="3."
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/tv_summary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="8dp"
+                android:text="Summary"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_wallet_summary"
+                app:layout_constraintTop_toTopOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/tv_current_balances"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:text="Current Balances :"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/lblCurrentbalance"
+                app:layout_constraintStart_toStartOf="@+id/tv_summary" />
+
+            <TextView
+                android:id="@+id/lblCurrentbalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_summary"
+                app:layout_constraintTop_toBottomOf="@+id/tv_summary" />
+
+            <TextView
+                android:id="@+id/tv_withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdrawal Amount:"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/lbl_withdrawal_amount"
+                app:layout_constraintStart_toStartOf="@+id/tv_current_balances" />
+
+            <TextView
+                android:id="@+id/lbl_withdrawal_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/lblCurrentbalance"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/lblCurrentbalance"
+                app:layout_constraintTop_toBottomOf="@+id/lblCurrentbalance" />
+
+            <TextView
+                android:id="@+id/tv_withdrawal_changes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdrawal Charges:"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/lbl_withdraw_charges"
+                app:layout_constraintStart_toStartOf="@+id/tv_withdrawal" />
+
+            <TextView
+                android:id="@+id/lbl_withdraw_charges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_withdrawal_amount"
+                app:layout_constraintStart_toStartOf="@+id/lbl_withdrawal_amount"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_withdrawal_amount" />
+
+            <TextView
+                android:id="@+id/lbl_new_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Balance:"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_new_balances"
+                app:layout_constraintStart_toStartOf="@+id/tv_withdrawal_changes" />
+
+            <TextView
+                android:id="@+id/tv_new_balances"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@+id/lbl_withdraw_charges"
+                app:layout_constraintStart_toStartOf="@+id/lbl_withdraw_charges"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_withdraw_charges" />
+
+            <CheckBox
+                android:id="@+id/chkConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Select to Confirm details"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <CheckBox
+                android:id="@+id/chkTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chkConfirm" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:text="Submit"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chkTerms" />
+
+            <TextView
+                android:id="@+id/lblTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="I agree to Terms &amp; Conditions"
+                android:textColor="@color/web_link"
+                android:textSize="@dimen/_12ssp"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/chkTerms"
+                app:layout_constraintTop_toBottomOf="@+id/chkConfirm" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

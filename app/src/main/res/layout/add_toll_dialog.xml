@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <LinearLayout
+        android:id="@+id/activity_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_bg"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <com.diff.provider.Utilities.MyBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Diff Driver"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.diff.provider.Utilities.MyBoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/add_toll_charge"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.diff.provider.Utilities.MyEditText
+                android:id="@+id/toll_amount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/cancel_text"
+                android:gravity="start"
+                android:hint="@string/add_toll"
+                android:lines="1"
+                android:padding="@dimen/_10sdp"
+                android:inputType="numberDecimal|number"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+        <com.diff.provider.Utilities.MyButton
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/otp_btn_bg"
+            android:text="@string/submit"
+            android:textColor="@color/button_text_color" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

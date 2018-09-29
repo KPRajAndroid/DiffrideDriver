@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.diff.provider"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 4
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        maven {
+            url uri('mint-plugin-repo-5.1.0')
+        }
+    }
+//    android.applicationVariants.all { v ->
+//        v.outputs.all {
+//            outputFileName = "${v.applicationId}_V${v.versionCode}_VN-" +
+//                    "${v.versionName}_" + new Date().format('yyyy-MM-dd') + ".apk"
+//        }
+//    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.0.0'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //For error logcat
+    implementation 'com.google.android.gms:play-services:12.0.1'
+    implementation 'com.airbnb.android:lottie:2.5.4'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.5'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.google.android.gms:play-services-auth:12.0.1'
+    implementation 'com.google.android.gms:play-services-gcm:12.0.1'
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.facebook.android:facebook-android-sdk:4.33.0'
+    implementation 'com.google.firebase:firebase-messaging:12.0.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.intuit.sdp:sdp-android:1.0.4'
+    implementation 'com.intuit.ssp:ssp-android:1.0.4'
+
+    implementation 'com.google.maps.android:android-maps-utils:0.4.4'
+    implementation 'com.koushikdutta.ion:ion:2.2.1'
+    implementation 'com.splunk:mint-android-sdk:5.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.daasuu:CountAnimationTextView:0.1.1'
+    implementation 'com.facebook.android:account-kit-sdk:4.33.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'me.philio:pinentryview:1.0.6'
+    implementation 'com.molpay:molpay-mobile-xdk-android:3.18.1'
+    implementation 'co.intentservice.android-chat-ui:chat-ui:0.1.1'
+    implementation 'com.pubnub:pubnub-android:3.7.5'
+    compile group: 'com.pubnub', name: 'pubnub', version: '4.0.5'
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.github.jkwiecien:EasyImage:2.0.4'
+    implementation 'com.akexorcist:googledirectionlibrary:1.1.1'
+}
+apply plugin: 'com.google.gms.google-services'
